@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *,
+      *::after,
+      *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        transition: transform 1s;
+      }
+      main {
+        margin: 2rem auto;
+        max-width: 600px;
+        height: 70vh;
+        
+        padding: 8px;
+        background-color: #403F43;
+        box-shadow:inset 0px 4px 8px hsl(255,7%,26%);
+      }
+      .image-box {
+        width: 100%;
+        height: 100%;
+
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 2fr;
+        grid-template-rows: 2fr 1fr 1fr 2fr;
+        
+      }
+      figure{
+        transition: transform 1s ease-in;
+        overflow: hidden;
+      }
+      figure:nth-of-type(1) {
+        grid-column: 1/3;
+        grid-row: 1/3;
+      }
+      figure:nth-of-type(2) {
+        grid-column: 3/5;
+        grid-row: 1/3;
+      }
+      figure:nth-of-type(3) {
+        grid-column: 1/3;
+        grid-row: 3/5;
+      }
+      figure:nth-of-type(4) {
+        grid-column: 3/5;
+        grid-row: 3/5;
+      }
+      figure:hover img{
+        transform: scale(1.3);
+      }
+     
+      div {
+        grid-column: 2/4;
+        grid-row: 2/4;
+        display: grid;
+        place-content: center;
+        background-color: #050505;
+        color: #fafafa;
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        transition: all 1s;
+        opacity: 0.6;
+       
+      }
+      p {
+        font-size: 2.1rem;
+        transition: all 1 ease-in-out;
+        text-transform: capitalize;
+        
+      }
+      div:hover p{
+        transition: all 2s ease;
+        color: #050505;
+        
+       
+      }
+      div:hover{
+        background-color:#fafafa ;
+        opacity: 1;
+      }
+      @media screen and (max-width: 500px) {
+        p {
+          font-size: 1.5rem;
+        }
+      }
+      @media screen and (max-width: 300px) {
+        p {
+          font-size: 0.7rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="image-box">
+        <figure>
+          <img
+            src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fGRvZ3N8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+            alt=""
+          />
+        </figure>
+        <figure>
+          <img
+            src="https://plus.unsplash.com/premium_photo-1668606763482-8dd2042c934e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDN8fGRvZ3N8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+            alt=""
+          />
+        </figure>
+        <figure>
+          <img
+            src="https://images.unsplash.com/photo-1510771463146-e89e6e86560e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fGRvZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+            alt=""
+          />
+        </figure>
+        <figure>
+          <img
+            src="https://images.unsplash.com/photo-1544568100-847a948585b9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDR8fGRvZ3N8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+            alt=""
+          />
+        </figure>
+
+        <div><p>dogs</p></div>
+      </section>
+    </main>
+  </body>
+</html>
