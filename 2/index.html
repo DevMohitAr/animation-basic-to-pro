@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,body{
+        height: 100%;
+      }
+      body {
+        background: black;
+        display: grid;
+        place-content: center;
+      }
+      .box{
+        width: 80px;
+        position: relative;
+        
+      }
+      .big-circle{
+        width: 80px;
+        height: 80px;
+        background-color: black;
+        border-radius: 50%;
+      }
+      .small-circle{
+        
+        position: absolute;
+        border-radius: 50%;
+        background: linear-gradient(to right,#009FFF,#ec2F4B);
+        width: 20px;
+        height: 20px;
+        inset: 0px;
+        margin: auto;
+        /* animation: spin 5s linear infinite; */
+         animation: spin 5s linear 2;
+        
+      }
+      .big-circle::after{
+        position: absolute;
+        content: '';
+        inset: -5px;
+        z-index: -1;
+        background: linear-gradient(to right,#009FFF,#ec2F4B);
+        border-radius: 50%;
+      }
+      
+      @keyframes spin {
+        from{
+          transform:rotate(0deg) translateX(80px);
+        }
+        to{
+          transform:rotate(360deg) translateX(80px);
+        }
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="box">
+   <div class="big-circle"></div>
+    <div class="small-circle"></div>
+    </div>
+ 
+  </body>
+</html>
