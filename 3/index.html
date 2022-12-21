@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html,body{
+        height: 100%;
+      }
+      body {
+        display: grid;
+        place-content: center;
+        background: #030303;
+      }
+      img {
+        max-width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        opacity: 0.4;
+      }
+      figure {
+        padding: 16px;
+        height: 280px;
+        position: relative;
+        background: #020202;
+        border: 5px solid transparent;
+        border-image-source: linear-gradient(45deg,#000000,#434343);
+        border-image-slice: 1;
+        box-shadow: 2px 4px 8px hsla(0,0%,0%,0.4);
+        transition: transform 0.8s ease-in;
+      }
+      figcaption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #f5f5f5;
+        text-transform: capitalize;
+        text-align: center;
+      }
+      h2 {
+        margin-bottom: 0.5em;
+      }
+      p {
+        margin: 0;
+        font-size: 0.75em;
+        white-space: nowrap;
+      }
+      figure::after {
+        content: "";
+        position: absolute;
+        inset: 24px;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        border-image-source: linear-gradient(45deg,#f7ff00,#db36a4);
+        border-image-slice: 30;
+        transform: scale(0, 1);
+        transition: transform 0.4s ease-in;
+      }
+      figure::before {
+        content: "";
+        position: absolute;
+        inset: 24px;
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
+        border-image-source: linear-gradient(45deg,#f7ff00,#db36a4);
+        border-image-slice: 30;
+        transform: scale(1, 0);
+        transition: transform 0.4s ease-in;
+      }
+
+      figure:hover::after {
+        transform: scale(1.1, 1);
+      }
+      figure:hover::before {
+        transform: scale(1, 1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <figure class="card">
+      <img
+        src="https://images.unsplash.com/photo-1671383167046-d86491da930b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDM4fDZzTVZqVExTa2VRfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+        alt=""
+      />
+      <figcaption>
+        <h2>nature</h2>
+        <p>relaxing place to unwind</p>
+      </figcaption>
+    </figure>
+  </body>
+</html>
