@@ -1,0 +1,39 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.demoArea {
+  display: flex;
+  gap: 4px;
+  min-height: 200px;
+  border: 1px solid hsl(210deg 15% 18%);
+  padding: 4px;
+}
+.flexItem {
+  background: hsl(210deg 15% 18%);
+  padding: 8px;
+  color: white;
+}
+.controls {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.selectControl {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.selectControl select {
+  font-size: 1rem;
+  padding: 8px;
+  border: 1px solid hsl(210deg 15% 18%);
+  background: hsl(210deg 15% 6%);
+  border-radius: 4px;
+}
+.select{
+    color: white;
+}
